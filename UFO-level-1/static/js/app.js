@@ -7,7 +7,7 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 // Select the button
-var button = d3.select("#button");
+var button = d3.select("#filter-btn");
 
 // Select the form
 var form = d3.select("#form");
