@@ -19,11 +19,11 @@ form.on("submit", runEnter);
 // Complete the event handler function for the form
 function runEnter() {
 
-    // Clear all data from previous searches
-    tbody.html("");
-
     // Prevent the page from refreshing
     d3.event.preventDefault();
+
+    // Clear all data from previous searches
+    tbody.html("");
 
     // Select the input element and get the raw HTML node
     var userInput = d3.select("#datetime");
