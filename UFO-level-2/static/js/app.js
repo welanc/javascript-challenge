@@ -147,12 +147,17 @@ function finalEnter() {
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
+    // Clear all data from previous searches
+    tbody.html("");
+
+    // Get all current search criteria
     dateValue = selectDate.property("value");
     cityValue = selectCity.property("value");
     stateValue = selectState.property("value");
     countryValue = selectCountry.property("value");
     shapeValue = selectShape.property("value");
 
+    // Filter based on all criteria
     var filteredData = tableData.filter(sighting =>
         (sighting.datetime === dateValue) &&
         (sighting.city === cityValue) &&
@@ -165,7 +170,7 @@ function finalEnter() {
         // Use d3 to append one table row `tr` for each UFO sighting object
         var row = tbody.append("tr");
 
-        // Use `Object.entries` to console.log each UFO sighting alue
+        // Use `Object.entries` to console.log each UFO sighting value
         var keyValuePairs = Object.entries(ufoSighting)
 
         keyValuePairs.forEach(([key, value]) => {

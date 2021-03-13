@@ -43,7 +43,7 @@ function runEnter() {
         // Use d3 to append one table row `tr` for each UFO sighting object
         var row = tbody.append("tr");
 
-        // Use `Object.entries` to console.log each UFO sighting alue
+        // Use `Object.entries` to console.log each UFO sighting value
         var keyValuePairs = Object.entries(ufoSighting)
 
         keyValuePairs.forEach(([key, value]) => {
